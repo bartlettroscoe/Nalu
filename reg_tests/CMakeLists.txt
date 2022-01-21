@@ -6,7 +6,7 @@
 file(GLOB RESULT ${CMAKE_SOURCE_DIR}/reg_tests/mesh/*)
 list(LENGTH RESULT RES_LEN)
 if(RES_LEN EQUAL 0)
-  message(WARNING
+  message(FATAL_ERROR
 "Testing is enabled, but the mesh submodule is not initialized.\
  You should 'git submodule init' and 'git submodule update'\
  before running the tests.")
